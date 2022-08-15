@@ -1,4 +1,4 @@
-﻿@model Category
+﻿@model Book
 
 <form method="post">
     <div class="border p-3 mt-4">
@@ -13,9 +13,14 @@
             <span asp-validation-for="Name" class="text-danger"></span>
         </div>
         <div class="mb-3">
-            <label asp-for="DisplayOrder"></label>
-            <input asp-for="DisplayOrder" class="form-control" />
-            <span asp-validation-for="DisplayOrder" class="text-danger"></span>
+            <label asp-for="Genre"></label>
+            <input asp-for="Genre" class="form-control" />
+            <span asp-validation-for="Genre" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Rating"></label>
+            <input asp-for="Rating" class="form-control" />
+            <span asp-validation-for="Rating" class="text-danger"></span>
         </div>
         <button type="submit" class="btn btn-primary" style="width:150px">Create</button>
         <a asp-controller="Category" asp-action="Index" class="btn btn-secondary">Back to List</a>
